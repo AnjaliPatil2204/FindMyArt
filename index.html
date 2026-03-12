@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtisanConnect | Local Artist Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Artisan<span>Connect</span></div>
+        <div class="nav-links">
+            <button class="btn-secondary" onclick="location.href='auth.html'">Artist Login</button>
+            <button class="btn-primary" onclick="location.href='auth.html'">Join as Artist</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Find the Perfect <span>Artist</span> for Your Occasion</h1>
+        <p>Expert Mehndi, Rangoli, and Makeup artists in your city.</p>
+        
+        <div class="search-bar-container">
+            <input type="text" id="searchLocation" placeholder="Enter your city (e.g. Pune)">
+            <select id="category">
+                <option value="">All Categories</option>
+                <option value="Mehndi">Mehndi Artist</option>
+                <option value="Rangoli">Rangoli Artist</option>
+                <option value="Makeup">Makeup Artist</option>
+            </select>
+            <button class="btn-search" onclick="searchArtist()">Search Now</button>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <h2 class="section-title">Featured Artists Near You</h2>
+        <div id="artistList" class="bento-grid">
+            </div>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+    <script src="auth.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
